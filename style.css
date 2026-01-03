@@ -1,0 +1,101 @@
+body {
+    font-family: Roboto, sans-serif;
+
+}
+
+.image-box img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    display: block;
+    will-change: transform;
+}
+
+.app {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    padding-bottom: 40px;
+}
+
+.blockquote {
+    padding: 20px 10px;
+    border-top: 2px dotted #d7d8dc;
+    border-bottom: 2px dotted #d7d8dc;
+}
+
+.quote-box {
+    max-width: 800px;
+}
+
+.text {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid #111;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #454545;
+    transition: box-shadow 0.15s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0 #111;
+}
+
+.btn:active {
+    box-shadow: 0 0 0 #111;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+
+/*animation Chuck*/
+
+.image-box img:hover {
+    animation: chuck-punch 0.45s infinite ease-in-out;
+    cursor: pointer;
+}
+
+@keyframes chuck-punch {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(-8px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateX(8px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .image-box img:hover {
+        animation: none;
+    }
+}
